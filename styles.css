@@ -1,0 +1,123 @@
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(Images/bglaptop.jpg); */
+    /* background-image: url(Images/bgl2.jpg); */
+    background-image: url(Images/bgl3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.game-info{
+    /* color: white; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+    position: absolute;
+    backdrop-filter: blur(50px); 
+    background-color: rgba(255, 255, 255, 0.250);
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    border: 1px rgba(220, 67, 67, 0.25);
+    padding: 0.5rem 3rem;
+}
+
+.tic-tac-toe{
+    width: 90%;
+    max-width: 20rem;
+    backdrop-filter: blur(50px); 
+    background-color: rgba(255, 255, 255, 0.250);
+    border-radius: 1rem;
+    border: 1px rgba(255, 255, 255, 0.40);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+    transform: translateY(-40px);
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    /* color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right:2px solid ;
+    border-bottom:2px solid ;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+     
+}
+
+.box3, .box6{
+    border-bottom: 2px solid;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+}
+
+.box7, .box8{
+    border-right:2px solid ;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+}
+.box9{
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+}
+
+.btn{
+    /* all: unset; */
+    cursor: pointer;
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(50px); 
+    background-color: rgba(255, 255, 255, 0.250);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border-radius: 1rem;
+    border: 1px rgba(220, 67, 67, 0.25);
+    display: none;
+
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(49, 86, 34, 0.595);
+}
+
+@media (max-width:400px) {
+    
+    .wrapper{
+        background-image: url("Images/bgphone.jpeg");
+    }
+    .game-info{
+        width: 200px;
+        text-align: center;
+    }
+
+}
